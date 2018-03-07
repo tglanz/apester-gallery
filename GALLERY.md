@@ -8,11 +8,13 @@
 
 Have tried using an hoc design for the implementation, with modification flexibility in mind.  
 For example, in order to NOT use image persistency -  The code below (At GalleryItem.js)
-    export default withPersistentImage({
-        imageSrcProp: 'src'
-    })(GalleryItem);
-should be transformed to
-    export default GalleryItem;
+```
+export default withPersistentImage({
+    imageSrcProp: 'src'
+})(GalleryItem);
+```
+should be transformed to  
+```export default GalleryItem;```  
 We basicaly wrapped a thin, visual component, with some logic.  
 Alternatively, we could change the specific implementation detail inside 'withPersistentImage' without the GalleryItem component knowing about it.  
 Or event transition to redux completely (The redux connect method is itself an hoc, nothing different here).
