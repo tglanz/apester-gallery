@@ -1,0 +1,14 @@
+.Header {
+    position: relative;
+    display: block;
+}
+
+.Header .header {
+    position: relative;
+    display: block;
+}
+
+.Header .blobs-container {
+    position: relative;
+    display: block;
+}
